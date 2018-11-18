@@ -12,11 +12,7 @@ namespace CodingTheory
     /// </summary>
     class ConvolutionalEncoder
     {
-        private const int RegisterPositionOne = 1;
-        private const int RegisterPositionTwo = 4;
-        private const int RegisterPositionThree = 5;
-        private const int RegisterLength = 6;
-        private bool[] register = new bool[RegisterLength];
+        private bool[] register = new bool[Constants.RegisterLength];
 
         /// <summary>
         /// LT - Šis metodas užkoduoja bitą dviem bitais, pirmas bitas yra įvedamas bitas, o antras bitas gaunamas atliekant xor sumą.
@@ -32,7 +28,10 @@ namespace CodingTheory
         /// </param>
         private void EncodeBit(Queue<bool> _output, bool _bit)
         {
-            bool encodedBit = _bit ^ register[RegisterPositionOne] ^ register[RegisterPositionTwo] ^ register[RegisterPositionThree];
+            bool encodedBit = _bit 
+                            ^ register[Constants.RegisterPositionOne] 
+                            ^ register[Constants.RegisterPositionTwo] 
+                            ^ register[Constants.RegisterPositionThree];
             _output.Enqueue(_bit);
             _output.Enqueue(encodedBit);
             ShiftRegister(_bit);
@@ -56,16 +55,16 @@ namespace CodingTheory
                 EncodeBit(_outputQueue, bit);
             }
 
-            clearRegister();
+            ClearRegister();
         }
 
         /// <summary>
         /// LT - Išvalo registrą, registro reikšmės pakeičiamos į 0.
         /// EN - Clearing register values.
         /// </summary>
-        private void clearRegister()
+        private void ClearRegister()
         {
-            for (int position = 0; position < RegisterLength; position++)
+            for (int position = 0; position < Constants.RegisterLength; position++)
             {
                 EncodeBit(new Queue<bool>(), false);
             }
