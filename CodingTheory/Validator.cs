@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace CodingTheory
 {
@@ -25,6 +20,24 @@ namespace CodingTheory
             }
 
             return true;
+        }
+
+        public static bool IsNoiseValid(string _text)
+        {
+            bool isValid;
+
+            if (!Regex.IsMatch(_text, @"^1\.\d{1,4}$") &&
+                !Regex.IsMatch(_text, @"^0\.\d{1,4}$") &&
+                !Regex.IsMatch(_text, @"^[0-1]$"))
+            {
+                isValid = false;
+            }
+            else
+            {
+                isValid = true;
+            }
+
+            return isValid;
         }
     }
 }

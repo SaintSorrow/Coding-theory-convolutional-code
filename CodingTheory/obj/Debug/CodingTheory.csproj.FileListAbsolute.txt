@@ -1,0 +1,9 @@
+D:\Deimantas\source\repos\CodingTheory\Coding-theory-convolutional-code\CodingTheory\obj\Debug\CodingTheory.SimpleForm.resources
+D:\Deimantas\source\repos\CodingTheory\Coding-theory-convolutional-code\CodingTheory\obj\Debug\CodingTheory.csproj.GenerateResource.cache
+D:\Deimantas\source\repos\CodingTheory\Coding-theory-convolutional-code\CodingTheory\obj\Debug\CodingTheory.csproj.CoreCompileInputs.cache
+D:\Deimantas\source\repos\CodingTheory\Coding-theory-convolutional-code\CodingTheory\bin\Debug\CodingTheory.exe.config
+D:\Deimantas\source\repos\CodingTheory\Coding-theory-convolutional-code\CodingTheory\bin\Debug\CodingTheory.exe
+D:\Deimantas\source\repos\CodingTheory\Coding-theory-convolutional-code\CodingTheory\bin\Debug\CodingTheory.pdb
+D:\Deimantas\source\repos\CodingTheory\Coding-theory-convolutional-code\CodingTheory\obj\Debug\CodingTheory.exe
+D:\Deimantas\source\repos\CodingTheory\Coding-theory-convolutional-code\CodingTheory\obj\Debug\CodingTheory.pdb
+D:\Deimantas\source\repos\CodingTheory\Coding-theory-convolutional-code\CodingTheory\obj\Debug\CodingTheory.csprojAssemblyReference.cache

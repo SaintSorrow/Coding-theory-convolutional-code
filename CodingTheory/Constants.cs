@@ -15,5 +15,6 @@ namespace CodingTheory
         public const int SecondaryRegisterPositionOne = 0;
         public const int SecondaryRegisterPositionTwo = 3;
         public const int SecondaryRegisterPositionThree = 5;
+        public const int HeaderBytes = 34;
     }
 }

@@ -55,18 +55,9 @@ namespace CodingTheory
                 EncodeBit(_outputQueue, bit);
             }
 
-            ClearRegister();
-        }
-
-        /// <summary>
-        /// LT - Išvalo registrą, registro reikšmės pakeičiamos į 0.
-        /// EN - Clearing register values.
-        /// </summary>
-        private void ClearRegister()
-        {
             for (int position = 0; position < Constants.RegisterLength; position++)
             {
-                EncodeBit(new Queue<bool>(), false);
+                EncodeBit(_outputQueue, false);
             }
         }
 

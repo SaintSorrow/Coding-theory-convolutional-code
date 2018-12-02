@@ -75,6 +75,11 @@ namespace CodingTheory
                 xor3 = secondaryRegister[Constants.SecondaryRegisterPositionTwo] ^ mde;
                 decodedBit = primaryRegister[Constants.RegisterPositionThree] ^ mde;
 
+                if (position >= 12)
+                {
+                    output.Enqueue(decodedBit);
+                }
+
                 secondaryRegister[5] = secondaryRegister[4];
                 secondaryRegister[4] = xor3;
                 secondaryRegister[3] = secondaryRegister[2];
@@ -83,7 +88,6 @@ namespace CodingTheory
                 secondaryRegister[0] = xor1;
 
                 ShiftRegister(primaryRegister, bitArray[position]);
-                output.Enqueue(decodedBit);
             }
 
             return output;
