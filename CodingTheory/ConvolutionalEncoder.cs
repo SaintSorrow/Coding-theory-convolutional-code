@@ -12,6 +12,9 @@ namespace CodingTheory
     /// </summary>
     class ConvolutionalEncoder
     {
+        /// <summary>
+        /// Registras kuris bus naudojamas informacijos užkodavimui
+        /// </summary>
         private bool[] register = new bool[Constants.RegisterLength];
 
         /// <summary>
@@ -55,9 +58,20 @@ namespace CodingTheory
                 EncodeBit(_outputQueue, bit);
             }
 
+            this.FinishEncoding(_outputQueue);
+        }
+
+        /// <summary>
+        /// Baigiamas kodavimas, papildomai užkoduojami 6 bitai nuliais, tol kol visi registrai pasidarys lygūs 0 
+        /// </summary>
+        /// <param name="_queue">
+        /// Eilė, į kurią bus įrašyti pasilikę bitai registruose
+        /// </param>
+        private void FinishEncoding(Queue<bool> _queue)
+        {
             for (int position = 0; position < Constants.RegisterLength; position++)
             {
-                EncodeBit(_outputQueue, false);
+                EncodeBit(_queue, false);
             }
         }
 

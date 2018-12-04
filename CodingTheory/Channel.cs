@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CodingTheory
 {
+    /// <summary>
+    /// klasė skirta simuliuoti nepatikimą kanalą su tam tikra klaidos tikimybe
+    /// </summary>
     public class Channel
     {
         public double ErrorProbability { get; set; }
@@ -18,6 +21,15 @@ namespace CodingTheory
             ErrorProbability = _errorProbability;
         }
 
+        /// <summary>
+        /// Metodas, kuris simuliuoja informacijos siuntimą nepatikimu kanalu
+        /// </summary>
+        /// <param name="_inputQueue">
+        /// Eilė, kurią norime iškraipyti
+        /// </param>
+        /// <returns>
+        /// Grąžina jau išskraipytą informaciją
+        /// </returns>
         public Queue<bool> SendData(Queue<bool> _inputQueue)
         {
             Queue<bool> outputQueue = new Queue<bool>();
@@ -43,9 +55,23 @@ namespace CodingTheory
             return outputQueue;
         }
 
+        /// <summary>
+        /// Simuliuojame vieno bito siuntimą kanalu
+        /// </summary>
+        /// <returns>
+        /// true - bitas buvo iškraipytas
+        /// false - bitas nebuvo iškraipytas
+        /// </returns>
         private bool SendBit()
         {
-            return (ErrorProbability > Random.NextDouble()) ? true : false;
+            if (Random.NextDouble() < ErrorProbability)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CodingTheory
 {
+    /// <summary>
+    /// Šioje klasėje yra saugomos konstantos, kurios yra naudojamos programoje
+    /// </summary>
     public static class Constants
     {
         public const int RegisterPositionOne = 1;

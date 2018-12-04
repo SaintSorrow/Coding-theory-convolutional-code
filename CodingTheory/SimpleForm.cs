@@ -55,7 +55,6 @@ namespace CodingTheory
             DecodedVectorValue.Text = "";
 
             StringInputValue.Text = "";
-            EncodedStringValue.Text = "";
             SentStringValue.Text = "";
             DecodedVectorValue.Text = "";
         }
@@ -65,6 +64,9 @@ namespace CodingTheory
             ProcessImage();
         }
 
+        /// <summary>
+        /// Apdorojamas paveikslėlis
+        /// </summary>
         private void ProcessImage()
         {
             if (!ValidateErrorChance())
@@ -93,6 +95,9 @@ namespace CodingTheory
             ShowLabels(true);
         }
 
+        /// <summary>
+        /// Apdorojamas vektorius
+        /// </summary>
         private void ProcessVector()
         {
             if (!ValidateErrorChance())
@@ -182,6 +187,9 @@ namespace CodingTheory
             return isValid;
         }
 
+        /// <summary>
+        /// Apdorojomas paprastas tekstas
+        /// </summary>
         private void ProcessString()
         {
             if (!ValidateErrorChance())
@@ -194,7 +202,11 @@ namespace CodingTheory
                 return;
             }
 
+            Conversion conversion = new Conversion(double.Parse(ErrorChanceValue.Text));
+            conversion.RunString(StringInputValue.Text);
 
+            DecodedStringValue.Text = conversion.DecodedVector;
+            SentStringValue.Text = conversion.EncodedAndSentVector;
         }
     }
 }

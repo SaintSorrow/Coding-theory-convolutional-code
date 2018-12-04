@@ -42,10 +42,8 @@
             this.SubmitStringButton = new System.Windows.Forms.Button();
             this.DecodedStringLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.EncodedStringLabel = new System.Windows.Forms.Label();
             this.DecodedStringValue = new System.Windows.Forms.TextBox();
             this.SentStringValue = new System.Windows.Forms.TextBox();
-            this.EncodedStringValue = new System.Windows.Forms.TextBox();
             this.StringInputValue = new System.Windows.Forms.TextBox();
             this.StringInputLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -172,10 +170,8 @@
             this.panel2.Controls.Add(this.SubmitStringButton);
             this.panel2.Controls.Add(this.DecodedStringLabel);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.EncodedStringLabel);
             this.panel2.Controls.Add(this.DecodedStringValue);
             this.panel2.Controls.Add(this.SentStringValue);
-            this.panel2.Controls.Add(this.EncodedStringValue);
             this.panel2.Controls.Add(this.StringInputValue);
             this.panel2.Controls.Add(this.StringInputLabel);
             this.panel2.Location = new System.Drawing.Point(403, 12);
@@ -197,7 +193,7 @@
             // 
             this.DecodedStringLabel.AutoSize = true;
             this.DecodedStringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DecodedStringLabel.Location = new System.Drawing.Point(131, 343);
+            this.DecodedStringLabel.Location = new System.Drawing.Point(111, 227);
             this.DecodedStringLabel.Name = "DecodedStringLabel";
             this.DecodedStringLabel.Size = new System.Drawing.Size(123, 20);
             this.DecodedStringLabel.TabIndex = 13;
@@ -207,25 +203,15 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 227);
+            this.label2.Location = new System.Drawing.Point(75, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(282, 20);
+            this.label2.Size = new System.Drawing.Size(220, 20);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Encoded string sent through channel";
-            // 
-            // EncodedStringLabel
-            // 
-            this.EncodedStringLabel.AutoSize = true;
-            this.EncodedStringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EncodedStringLabel.Location = new System.Drawing.Point(131, 114);
-            this.EncodedStringLabel.Name = "EncodedStringLabel";
-            this.EncodedStringLabel.Size = new System.Drawing.Size(121, 20);
-            this.EncodedStringLabel.TabIndex = 11;
-            this.EncodedStringLabel.Text = "Encoded string";
+            this.label2.Text = "Sent string without encoding";
             // 
             // DecodedStringValue
             // 
-            this.DecodedStringValue.Location = new System.Drawing.Point(12, 385);
+            this.DecodedStringValue.Location = new System.Drawing.Point(12, 260);
             this.DecodedStringValue.Multiline = true;
             this.DecodedStringValue.Name = "DecodedStringValue";
             this.DecodedStringValue.Size = new System.Drawing.Size(360, 62);
@@ -233,19 +219,11 @@
             // 
             // SentStringValue
             // 
-            this.SentStringValue.Location = new System.Drawing.Point(12, 260);
+            this.SentStringValue.Location = new System.Drawing.Point(12, 139);
             this.SentStringValue.Multiline = true;
             this.SentStringValue.Name = "SentStringValue";
             this.SentStringValue.Size = new System.Drawing.Size(360, 62);
             this.SentStringValue.TabIndex = 9;
-            // 
-            // EncodedStringValue
-            // 
-            this.EncodedStringValue.Location = new System.Drawing.Point(12, 139);
-            this.EncodedStringValue.Multiline = true;
-            this.EncodedStringValue.Name = "EncodedStringValue";
-            this.EncodedStringValue.Size = new System.Drawing.Size(360, 62);
-            this.EncodedStringValue.TabIndex = 8;
             // 
             // StringInputValue
             // 
@@ -436,10 +414,8 @@
         private System.Windows.Forms.Button SubmitVectorButton;
         private System.Windows.Forms.Label DecodedStringLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label EncodedStringLabel;
         private System.Windows.Forms.TextBox DecodedStringValue;
         private System.Windows.Forms.TextBox SentStringValue;
-        private System.Windows.Forms.TextBox EncodedStringValue;
         private System.Windows.Forms.Label OriginalPictureLabel;
         private System.Windows.Forms.Label EncodedAndDecodedLabel;
         private System.Windows.Forms.Label NotEncodedPictureLabel;
